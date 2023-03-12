@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071842fd8de34ab4b9b6902f95f567d0, type: 3}
+  m_Name: LoadPlatformsUpgradeConfig
+  m_EditorClassIdentifier: 
+  Id: 2
+  MaxLevel: 5
+  PriceTable:
+    _basePrice: 0
+    _levels: 020000000400000006000000080000000a000000
+  UpgradeInfo: {fileID: 11400000, guid: 2e508d4f525b9dd4bb84369980217783, type: 2}
+  PlatformTable:
+    _startAmount: 2
+    _upgradeStep: 2
