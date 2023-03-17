@@ -19,6 +19,7 @@ public class StartGame : MonoBehaviour
     {
         _context.ConstructGame();
         _context.InitializationGame();
+        _context.SynchronizationGame();
         _timerGameStart.Play(); 
     }
 

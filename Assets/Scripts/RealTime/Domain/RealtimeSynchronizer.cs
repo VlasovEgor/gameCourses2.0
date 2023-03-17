@@ -4,16 +4,11 @@ using Zenject;
 
 public sealed class RealtimeSynchronizer : IInitializable, IDisposable
 {
-    //[Inject] private SceneContext _gameSceneContext;
-
     [Inject] private RealtimeManager _realtimeManager;
     [Inject] private TimeShiftEmitter _timeShiftEmitter;
 
     public void Initialize()
     {
-        //_realtimeManager = _gameSceneContext.Container.Resolve<RealtimeManager>();
-        //_timeShiftEmitter = _gameSceneContext.Container.Resolve<TimeShiftEmitter>();
-
         _realtimeManager.OnStarted += OnSessionStarted;
         _realtimeManager.OnResumed += OnSessionResumed;
     }

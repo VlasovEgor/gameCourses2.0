@@ -46,6 +46,19 @@ public class GameContext : MonoBehaviour, IGameContext
         Debug.Log("Game init");
     }
 
+    public void SynchronizationGame()
+    {
+        foreach (var listener in _listeners)
+        {
+            if (listener is ISyncGameListener synchronizationListener)
+            {
+                synchronizationListener.OnSyncGame();
+            }
+        }
+
+        Debug.Log("Game sync");
+    }
+
     [Button]
     public void StartGame()
     {

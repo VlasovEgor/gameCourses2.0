@@ -22,8 +22,14 @@ public class ChestManager :IDisposable
 
     public void Setup(List<Chest> chests)
     {
-        _chests = chests.ToDictionary(it => it.Id);
-        StartAllChests();
+        for (int i = 0; i < chests.Count; i++)
+        {
+            if (_chests.ContainsKey(chests[i].Id) == false)
+            {
+                _chests.Add(chests[i].Id, chests[i]);
+                StartChest(chests[i]);
+            }
+        }
     }
 
     public Chest LoadChest(ChestConfig chestConfig)
@@ -101,6 +107,14 @@ public class ChestManager :IDisposable
             OnChestStarted?.Invoke(currentChest);
             OnChestLaunched?.Invoke(currentChest);
         }
+    }
+
+    private void StartChest(Chest chest)
+    {
+        chest.Start();
+
+        OnChestStarted?.Invoke(chest);
+        OnChestLaunched?.Invoke(chest);
     }
 
     private void StopAllChests()

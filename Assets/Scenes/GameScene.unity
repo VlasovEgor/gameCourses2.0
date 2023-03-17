@@ -7555,9 +7555,8 @@ MonoBehaviour:
   - {fileID: 1265347051}
   - {fileID: 1980640580}
   - {fileID: 592095473}
-  - {fileID: 592095473}
-  - {fileID: 0}
   - {fileID: 592095474}
+  - {fileID: 1570068083}
   _gameContext: {fileID: 1960813548}
   _moneyStorage: {fileID: 439939487}
   _manipulatorsInput: {fileID: 717304094}

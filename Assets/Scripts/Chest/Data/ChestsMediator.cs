@@ -3,7 +3,6 @@ using Zenject;
 
 public class ChestsMediator: IInitializable, IDisposable
 {
-  // [Inject] private SceneContext _gameSceneContext;
 
     [Inject] private ChestsRepository _chestsRepository;
     [Inject] private ChestManager _manager;
@@ -11,10 +10,6 @@ public class ChestsMediator: IInitializable, IDisposable
 
     void IInitializable.Initialize()
     {   
-      //  _manager = _gameSceneContext.Container.Resolve<ChestManager>();
-      //  _chestsRepository = _gameSceneContext.Container.Resolve<ChestsRepository>();
-      //  _assetSupplier = _gameSceneContext.Container.Resolve<ChestsAssetSupplier>();
-      
         if (_chestsRepository.LoadChests(out var boostersData))
         {
             LoadData(boostersData);
